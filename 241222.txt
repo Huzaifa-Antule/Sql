@@ -1,0 +1,12 @@
+Display the information of employess who's salary is greater than the maximum salary of Dept no 90
+
+
+
+
+SELECT * FROM HR.Employees WHERE Salary>
+(SELECT Salary FROM HR.Employees WHERE First_Name='Lex')
+
+SELECT * FROM HR.Employees WHERE Salary>(SELECT MAX(Salary) FROM HR.Employees WHERE Department_Id=60)
+.
+
+SELECT * FROM HR.Employees WHERE TO_CHAR(Hire_Date,'YYYY')<(SELECT TO_CHAR(Hire_Date,'YYYY') FROM HR.Employees WHERE First_Name='Valli')
