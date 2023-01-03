@@ -1,0 +1,56 @@
+Cartiosion Product
+
+SELECT First_Name,Last_Name,Department_Id,Department_Name
+FROM HR.Employees
+
+2889
+
+SELECT First_Name,Last_Name,d.Department_Id,Department_Name
+FROM HR.Employees e,HR.Departments d
+WHERE d.Department_Id=e.Department_Id
+
+
+SELECT First_Name,Last_Name,d.Department_Id,Department_Name
+FROM HR.Employees e,HR.Departments d
+WHERE d.Department_Id(+)=e.Department_Id
+
+
+
+SELECT d.Department_Id,Department_Name,AVG(Salary),SUM(Salary)
+FROM HR.Employees e,HR.Departments d
+WHERE d.Department_Id(+)=e.Department_Id
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

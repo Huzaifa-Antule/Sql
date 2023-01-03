@@ -1,0 +1,142 @@
+17/12/22 Sat 9:00 AM To 11:00 AM
+
+SELECT * FROM HR.Employees
+SELECT SUM(Salary) FROM HR.Employees
+SELECT COUNT(*) FROM HR.Employees
+SELECT AVG(Salary) FROM HR.Employees
+
+SELECT SUM(Salary),MIN(Salary),MAX(Salary),AVG(Salary),COUNT(*) FROM HR.Employees
+
+SELECT SUM(Salary),MIN(Salary),MAX(Salary),AVG(Salary),COUNT(*) "No of Emp" FROM HR.Employees
+
+SELECT COUNT(*) FROM HR.Employees
+WHERE Department_Id=90
+
+SELECT SUM(Salary),MIN(Salary),MAX(Salary),AVG(Salary),COUNT(*) FROM HR.Employees
+WHERE Department_Id=90
+
+SELECT Department_Id,SUM(Salary),MIN(Salary),MAX(Salary),AVG(Salary),COUNT(*) FROM HR.Employees
+GROUP BY Department_Id
+ORDER BY Department_Id 
+
+
+SELECT Department_Id,SUM(Salary),MIN(Salary),MAX(Salary),AVG(Salary),COUNT(*) FROM HR.Employees
+GROUP BY Department_Id
+ORDER BY 1
+
+
+SELECT Department_Id,SUM(Salary),MIN(Salary),MAX(Salary),AVG(Salary),COUNT(*) FROM HR.Employees
+GROUP BY Department_Id
+ORDER BY Department_Id DESC
+
+CREATE(Half)
+INSERT
+SELECT
+FILTER WHERE
+CONDITION
+Math Op
+Logical
+Aggrigate
+GROUP BY
+ORDER BY
+INBUILD FUNCTION (STRING,NUMBER)
+DATE CONVERSION FUNCTION(TO_CHAR)
+
+
+DATE FORMAT
+'DD-MON-YY'
+SELECT HIRE_DATE,TO_CHAR(HIRE_DATE,'YYYY')"Hiring Year" FROM HR.Employees
+
+SELECT First_Name,HIRE_DATE,TO_CHAR(HIRE_DATE,'YYYY')"Hiring Year",TO_CHAR(HIRE_DATE,'MONTH')"Hiring MONTH" ,TO_CHAR(HIRE_DATE,'W')"Hiring Week",TO_CHAR(HIRE_DATE,'DAY')"Hiring DAY"FROM HR.Employees
+
+SELECT First_Name,Hire_Date FROM HR.Employees
+WHERE TO_CHAR(Hire_Date,'DAY')="SUNDAY"
+
+SELECT First_Name,Hire_Date,TO_CHAR(Hire_Date,'DAY') FROM HR.Employees
+WHERE RTRIM(TO_CHAR(Hire_Date,'DAY'))='SUNDAY'
+
+20/12/22
+CONSTRATINTS
+CREATE TABLE Demo
+(
+Demo_Id NUMBER(2),
+Demo_Name VARCHAR2(20),
+Desc VARCHAR2(20)
+)
+
+==========
+23/12/22
+
+CREATE TABLE Emp
+(
+Emp_Id NUMBER(3),
+First_Name VARCHAR2(20),
+Last_Name VARCHAR2(20),
+DOJ DATE,
+Salary NUMBER(5),
+Dept_No NUMBER(2)
+)
+Desc Emp2
+INSERT INTO Emp4 VALUES(10,'hanif','pathan','27-OCT-12',85000,101)
+SELECT * FROM Emp4
+CREATE TABLE Emp2
+(
+Emp_Id NUMBER(3) NOT NULL,
+First_Name VARCHAR2(20),
+Last_Name VARCHAR2(20),
+DOJ DATE,
+Salary NUMBER(5),
+Dept_No NUMBER(2)
+)
+CREATE TABLE Emp2
+(
+Emp_Id NUMBER(3) UNIQUE,
+First_Name VARCHAR2(20),
+Last_Name VARCHAR2(20),
+DOJ DATE,
+Salary NUMBER(5),
+Dept_No NUMBER(2)
+)
+CREATE TABLE Emp4
+(
+Emp_Id NUMBER(3) PRIMARY KEY,
+First_Name VARCHAR2(20),
+Last_Name VARCHAR2(20),
+DOJ DATE,
+Salary NUMBER(5),
+Dept_No CONSTRAINT Dptfk REFERENCES Dept(Dept_Id)
+)
+DESC Emp3
+
+CREATE TABLE Dept
+(
+    Dept_Id NUMBER(3) PRIMARY KEY,
+    Dname VARCHAR2(30),
+    Location VARCHAR2(20)
+)
+INSERT INTO Dept VALUES(102,'FIN','NAGPUR')
+SELECT * FROM Dept
+
+DELETE  FROM Emp WHERE Emp_id=11
+DELETE  FROM Dept WHERE Dept_id=102
+
+SELECT * FROM Emp4
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
